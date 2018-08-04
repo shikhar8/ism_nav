@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        h1{
+                font-family:fantasy;
+                font-style: italic;
+                height: 200;
+
+                background-color:deepskyblue;
+                font-size: 75px;
+                color:red;
+                text-align:center;
+        }
+
+        body{
+            text-align:center;
+            font-size: 150%
+        }
+
+        
+    </style>
+    <title>
+        number of ways
+    </title>
+</head>
+<body>
+    <h1>
+        here we present the number of ways to go from {{start}} to {{end}}
+    </h1>
+    <div class="f">
+    {% for i in final1 %}
+    {% for j in i %}
+    {{j}}
+    {% endfor %}
+    <p></p>
+    {% endfor %}
+    <p>sum total is {{sum}}</p>
+    </div>
+</body>
+</html>

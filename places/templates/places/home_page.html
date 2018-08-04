@@ -1,0 +1,63 @@
+<html>
+    <head>
+        
+        <style>
+            #h{
+                font-family:fantasy;
+                font-style: italic;
+
+                background-color:deepskyblue;
+                font-size: 150px;
+                color:black;
+                text-align:center;
+
+            }
+            .b{
+                border-style: dashed;
+                border-width: 5px;
+            }
+            form{
+                height: 300px;
+                font-size: 14pt;
+                text-align: center;
+                align-self:center;
+                size: 30px;
+                font-size: 20px;
+
+                
+            }
+            #i1,#i2{
+                height: 100px;
+                width:500px;
+                font-size:25pt;
+            }
+            #i3{
+                height: 50px;
+                width:300px;
+                font-size:15pt;
+                border-style: outset;
+            }
+            #xx{
+                text-align: center;
+                font-size: 150%;
+
+            }
+
+
+        </style>
+        <title>
+            places in ism
+        </title>
+    </head>
+    <body class="b">
+        <h1 id="h">welcome</h1>
+        <p id ="xx">select among rd,nlhc,sac,amul,main canteen</p>
+        <form action="{% url 'getx' %}"  method="get" >
+        <input type="text" name="start" placeholder="start" id="i1">
+        <p></p>
+        <input type="text" name="end" placeholder="end" id="i2">
+        <p></p>
+        <input type="submit" value='submit' id="i3">
+        </form>
+    </body>
+</html>
