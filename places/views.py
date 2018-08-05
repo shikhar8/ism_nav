@@ -10,7 +10,7 @@ def getx(request):
     end= request.GET['end']
     #return HttpResponse(start)
     a = {0: 'rd', 1: 'amul', 2: 'main canteen', 3: 'nlhc', 4: 'sac'}
-    b = {0: [1, 1, 2, 3, 4], 1: [5, 1, 2, 13, 4], 2: [21, 3, 1, 4, 4], 3: [21, 2, 9, 1, 1], 4: [1, 2, 3, 4, 1]}
+    #b = {0: [1, 1, 2, 3, 4], 1: [5, 1, 2, 13, 4], 2: [21, 3, 1, 4, 4], 3: [21, 2, 9, 1, 1], 4: [1, 2, 3, 4, 1]}
     #c = start
     #ax=Place.object.filter(Placename=start).number
     #print(ax)
@@ -36,6 +36,21 @@ def getx(request):
     #for i in shr.keys():
      #   b[int(i)] = shr[i]
      #   return HttpResponse(b)
+    b={}
+    pna=[]
+    from .models import Pn
+    pnall=Pn.objects.all()
+    for i,j in zip(pnall,range(5)):
+
+        pna.append(i.n0)
+        pna.append(i.n1)
+        pna.append(i.n2)
+        pna.append(i.n3)
+        pna.append(i.n4)
+        b[j]=pna
+        pna=[]
+    #for i in b.keys():
+    #    return HttpResponse(b[0])
 
     from .models import Place
     abc = Place.objects.filter(Placename=start)
